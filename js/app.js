@@ -19,13 +19,8 @@ fetchThemes();
 
 /*remove old cdn and append new*/
 addCDN = (currentTheme) => {
-  if (currentTheme > myCDNs.length || currentTheme < 0){
-    return
-  } else {
   document.querySelector('#cdn').setAttribute('href', myCDNs[currentTheme]);
-  }
 }
-
 
 /* click handlers */
 document.querySelector('#backward').onclick = () =>{
