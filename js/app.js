@@ -22,14 +22,20 @@ addCDN = (currentTheme) => {
   document.querySelector('#cdn').setAttribute('href', myCDNs[currentTheme]);
 }
 
+addThemeName = (currentTheme) => {
+  document.querySelector('#themeName').innerHTML = myThemes[currentTheme];
+}
+
 /* click handlers */
 document.querySelector('#backward').onclick = () =>{
   currentTheme--;
   addCDN(currentTheme);
+  addThemeName(currentTheme);
 }
 
 document.querySelector('#forward').onclick = () =>{
   currentTheme ++;
   addCDN(currentTheme);
+  addThemeName(currentTheme);
 }
 
