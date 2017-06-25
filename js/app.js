@@ -19,8 +19,11 @@ fetchThemes();
 
 /*remove old cdn and append new*/
 addCDN = (currentTheme) => {
-  console.log(cdn.href);
-  document.querySelector('#cdn').setAttribute('href', 'https://bootswatch.com/cosmo/bootstrap.min.css');
+  if (currentTheme > myCDNs.length || currentTheme < 0){
+    return
+  } else {
+  document.querySelector('#cdn').setAttribute('href', myCDNs[currentTheme]);
+  }
 }
 
 
