@@ -1,6 +1,6 @@
 let myThemes = [];
 let myCDNs = [];
-let currentTheme = -1;
+let currentTheme = 0;
 
 /* Fetching */
 fetchThemes = () => {
@@ -24,16 +24,12 @@ addCDN = (currentTheme) => {
 
 /* click handlers */
 document.querySelector('#backward').onclick = () =>{
-  console.log('backwards was pushed');
   currentTheme--;
-  console.log(currentTheme);
   addCDN(currentTheme);
 }
 
 document.querySelector('#forward').onclick = () =>{
-  console.log('forward was pushed');
   currentTheme ++;
-  console.log(currentTheme);
   addCDN(currentTheme);
 }
 
