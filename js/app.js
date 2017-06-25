@@ -1,16 +1,11 @@
-/* URL */
-const URL = 'https://bootswatch.com/api/3.json';
-
-/* themes */
 let myThemes = [];
-
-/* cdn's */
 let myCDNs = [];
-/* Variables */
+let currentTheme = -1;
+let cdn = document.querySelector('#cdn');
 
 /* Fetching */
 fetchThemes = () => {
-  fetch(URL)
+  fetch('https://bootswatch.com/api/3.json')
   .then(function(data){
     data.json()
     .then(function(response) {
@@ -21,32 +16,25 @@ fetchThemes = () => {
     });
   });
 }
-
 fetchThemes();
 
-console.log(myThemes);
-console.log(myCDNs);
-
-
 addCDN = (currentTheme) => {
-  console.log('adding a new theme!')
+  document.createElement()
 }
 
 
 /* click handlers */
-// window.onload = () =>{
-  let currentTheme = -1;
-  document.querySelector('#backward').onclick = () =>{
-    console.log('backwards was pushed');
-    currentTheme--;
-    console.log(currentTheme);
-    addCDN(currentTheme);
-  }
+document.querySelector('#backward').onclick = () =>{
+  console.log('backwards was pushed');
+  currentTheme--;
+  console.log(currentTheme);
+  addCDN(currentTheme);
+}
 
-  document.querySelector('#forward').onclick = () =>{
-    console.log('forward was pushed');
-    currentTheme ++;
-    console.log(currentTheme);
-    addCDN(currentTheme);
-  }
-// }
+document.querySelector('#forward').onclick = () =>{
+  console.log('forward was pushed');
+  currentTheme ++;
+  console.log(currentTheme);
+  addCDN(currentTheme);
+}
+
