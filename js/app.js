@@ -1,7 +1,6 @@
 let myThemes = [];
 let myCDNs = [];
 let currentTheme = -1;
-let cdn = document.querySelector('#cdn');
 
 /* Fetching */
 fetchThemes = () => {
@@ -18,8 +17,10 @@ fetchThemes = () => {
 }
 fetchThemes();
 
+/*remove old cdn and append new*/
 addCDN = (currentTheme) => {
-  document.createElement()
+  console.log(cdn.href);
+  document.querySelector('#cdn').setAttribute('href', 'https://bootswatch.com/cosmo/bootstrap.min.css');
 }
 
 
