@@ -27,13 +27,26 @@ fetchThemes();
 console.log(myThemes);
 console.log(myCDNs);
 
-moveForward = () => {
-  
-}
 
-moveBackwards = () => {
-
+addCDN = (currentTheme) => {
+  console.log('adding a new theme!')
 }
 
 
 /* click handlers */
+// window.onload = () =>{
+  let currentTheme = -1;
+  document.querySelector('#backward').onclick = () =>{
+    console.log('backwards was pushed');
+    currentTheme--;
+    console.log(currentTheme);
+    addCDN(currentTheme);
+  }
+
+  document.querySelector('#forward').onclick = () =>{
+    console.log('forward was pushed');
+    currentTheme ++;
+    console.log(currentTheme);
+    addCDN(currentTheme);
+  }
+// }
