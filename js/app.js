@@ -1,28 +1,39 @@
 /* URL */
 const URL = 'https://bootswatch.com/api/3.json';
 
+/* themes */
+let myThemes = [];
 
+/* cdn's */
+let myCDNs = [];
 /* Variables */
 
-
-
-
 /* Fetching */
-fetchThemes = (i) => {
+fetchThemes = () => {
   fetch(URL)
   .then(function(data){
     data.json()
     .then(function(response) {
-      console.log(response.themes[i]);
+      for (let i = 0; i < response.themes.length; i++){
+        myThemes.push (response.themes[i].name);
+        myCDNs.push (response.themes[i].css);
+      }
     });
   });
 }
 
-getNames = (i) => {
-  fetchThemes(i);
+fetchThemes();
+
+console.log(myThemes);
+console.log(myCDNs);
+
+moveForward = () => {
+  
 }
 
-let i = 0;
+moveBackwards = () => {
+
+}
 
 
-getNames(i);
+/* click handlers */
